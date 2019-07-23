@@ -40,7 +40,11 @@ class Roulette extends React.Component {
   };
 
   componentDidMount() {
-    this.drawRouletteWheel();
+      this.drawRouletteWheel();
+      var that = this;
+      setTimeout(function () {
+          that.drawRouletteWheel();
+      },500)
     console.log(this.state.lockTarget);
   }
 
